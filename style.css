@@ -2,29 +2,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Noto+Serif:ital@0;1&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
 * {
     font-family:  'Noto Serif', serif;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #F1F1F1;
 }
 header {
     background-image: url(img/header-bg.png);
-    max-width: 1683px;
-    height: 100vh;
-    /* height: 867px; */
+    /* max-width: 1683px; */
+    max-height: 100vh;
+    height: 867px;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
 }
-header .container {
-    max-width: 1257px;
+.basliq-blur {
+    background: rgba(1, 1, 1, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
-.navbar .nav2 {
+.nav-menu .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 90;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: .9;
+   
+}
+.nav-menu .nav1 {
     display: flex;
     align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
     gap: 10px;
     font-size: 1.2rem;
 }
-.navbar .nav2 a {
+.nav-menu .nav1 .lang-globe {
+    padding: 0 20px;
+    font-size: 1.3rem;
+}
+.nav-menu .nav1 a {
     color: white;
 }
-.nav2 .burger-menu {
+.nav1 .burger-menu {
     border: 0;
     padding: 0;
     /* background-color: transparent; */
@@ -40,10 +69,10 @@ header .container {
     position: absolute;
     /* left: 0; */
     width: 100%;
-    height: 2.5px;
+    height: 2.7px;
     background-color: white;
     transition: all .5s ease;
-    opacity: 1;
+    /* opacity: 1; */
     margin: 5px auto;
 }
 
@@ -60,12 +89,186 @@ header .container {
     width: 35%;
     margin-left: 18px;
 }
-.burger-menu:hover .bar1 {
+.nav1 .right-menu {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+.nav1 .right-menu .menu-open {
+    position: relative;
+}
+.nav1 .right-menu .menu-open span {
+    position: absolute;
+    transition: all .5s ease;
+    
+}
+.right-menu:hover .bar1 {
     transform: translateY(6px);
 }
-.burger-menu:hover .bar3 {
+.right-menu:hover .bar3 {
     transform: translateY(-6px);
 }
-.burger-menu:hover .menu-open {
-    content: 'OPEN';
+.right-menu .menu-open span:nth-child(2) {
+    visibility: hidden;
+    opacity: 0;
 }
+.right-menu:hover .menu-open span:nth-child(2) {
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    
+}
+.right-menu:hover .menu-open span:nth-child(1) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+header .nav-bottom .nav2 {
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    transform: translateY(350px);
+}
+ .nav-bottom .nav2 p {
+    width: 539px;
+    /* height: 90px; */
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.nav-bottom .nav2 h1 {
+    font-size: 4rem;
+}
+header .scroll-down button {
+    background-color: transparent;
+    transform: translateY(350px);
+    border-radius: 50%;
+    border: none;
+}
+header .scroll-down button a {
+    color:#F1F1F1;
+}
+header .scroll-down button a i {
+    font-size: 2rem;
+}
+/*footer begin*/
+
+
+
+
+
+
+
+/* connect begin */
+.connect-wp {
+    position: fixed;
+    right: 170px;
+    bottom: 10px;
+    gap: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.connect-tel {
+    position: fixed;
+    right: 95px;
+    bottom: 10px;
+    gap: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.connect-chevron {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    gap: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.connect-chevron li {
+    box-shadow: 0 0 8px white;
+    border-radius: 50%;
+}
+
+.connect-wp:before,
+.connect-wp:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    background-color: #a4a4ab;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: .7;
+}
+
+.connect-tel:before,
+.connect-tel:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 58%;
+    background-color: #a4a4ab;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: .7;
+}
+
+.connect-wp:before,
+.connect-tel:before {
+    animation: pulse 2s ease-out infinite;
+}
+
+.connect-wp:after,
+.connect-tel:after,
+.connect-chevron:after {
+    animation: pulse 2s 1s ease-out infinite;
+}
+
+@keyframes pulse {
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+.connect-wp li a i,
+.connect-tel li a i {
+    color: white;
+    font-size: 1.6rem;
+    padding: 15px;
+}
+
+.connect-chevron li a i {
+    font-size: 2.2rem;
+    color: white;
+    padding: 12px 14px;
+
+}
+
+.connect-wp li a .fa-whatsapp,
+.connect-tel li a .fa-phone-alt,
+.connect-chevron li a .fa-chevron-up {
+    background-color: #004191;
+    border-radius: 50%;
+}
+
+.connect-wp li a i:hover,
+.connect-tel li a i:hover,
+.connect-chevron li a i:hover {
+    background-color: #20b156;
+    transition: .6s;
+}
+/* connect end*/
+/*footer end*/
+@media (max-width: 768px) {
+    
+}
+
+
+
