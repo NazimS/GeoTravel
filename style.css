@@ -10,11 +10,13 @@ body {
 header {
     background-image: url(img/header-bg.png);
     /* max-width: 1683px; */
-    max-height: 100vh;
-    height: 867px;
+    /* max-height: 100vh; */
+    height: 100vh;
+    /* height: 867px; */
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    position: relative;
 }
 .basliq-blur {
     background: rgba(1, 1, 1, 0.2);
@@ -23,6 +25,9 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
 }
 .nav-menu .logo {
     display: flex;
@@ -31,13 +36,28 @@ header {
     padding: 10px 0;
     z-index: 90;
 }
+.logo .foto img:nth-child(2) {
+    display: none;
+}
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: .9;
-   
+    /* opacity: .9; */
+    background-color: white;
 }
+.sticky .logo .foto img:nth-child(1) {
+    display: none;
+}
+.sticky .logo .foto img:nth-child(2) {
+    display: block;
+    width: 215px;
+    height: 101px;
+    object-fit: contain;
+}
+.sticky .logo .nav1 .burger-menu div  {background-color: #004191;}
+.sticky .logo .nav1 .menu-open span {color: #004191;}
+.sticky .logo .nav1 .lang-globe a i {color: #004191;}
 .nav-menu .nav1 {
     display: flex;
     align-items: center;
@@ -122,16 +142,19 @@ header {
     visibility: hidden;
     opacity: 0;
 }
-
+header .nav-bottom  {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    
+}
 header .nav-bottom .nav2 {
     display: flex;
     justify-content: space-between;
-    /* justify-content: center; */
-    transform: translateY(350px);
 }
  .nav-bottom .nav2 p {
     width: 539px;
-    /* height: 90px; */
     letter-spacing: 1px;
     font-size: 1.2rem;
     font-weight: bolder;
@@ -139,9 +162,12 @@ header .nav-bottom .nav2 {
 .nav-bottom .nav2 h1 {
     font-size: 4rem;
 }
+header .scroll-down {
+    
+}
 header .scroll-down button {
     background-color: transparent;
-    transform: translateY(350px);
+   
     border-radius: 50%;
     border: none;
 }
@@ -151,6 +177,19 @@ header .scroll-down button a {
 header .scroll-down button a i {
     font-size: 2rem;
 }
+ /*main begin*/
+    main .about {
+        background-image: url(img/Ellipse\ 3.png);
+        padding: 100px 0 100px 0;
+    }
+    main .about .section1 {
+        display: flex;
+        gap: 50px;
+    }
+ /*main end*/
+
+
+
 /*footer begin*/
 
 
