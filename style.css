@@ -4,9 +4,6 @@
     font-family:  'Noto Serif', serif;
     scroll-behavior: smooth;
 }
-body {
-    background-color: #F1F1F1;
-}
 header {
     background-image: url(img/header-bg.png);
     /* max-width: 1683px; */
@@ -34,7 +31,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    z-index: 90;
 }
 .logo .foto img:nth-child(2) {
     display: none;
@@ -44,6 +40,7 @@ header {
     top: 0;
     width: 100%;
     /* opacity: .9; */
+    z-index: 99;
     background-color: white;
 }
 .sticky .logo .foto img:nth-child(1) {
@@ -76,7 +73,6 @@ header {
 .nav1 .burger-menu {
     border: 0;
     padding: 0;
-    /* background-color: transparent; */
     position: relative;
     display: inline-block;
     width: 30px;
@@ -87,12 +83,10 @@ header {
 .burger-menu div {
     display: block;
     position: absolute;
-    /* left: 0; */
     width: 100%;
     height: 2.7px;
     background-color: white;
     transition: all .5s ease;
-    /* opacity: 1; */
     margin: 5px auto;
 }
 
@@ -162,9 +156,6 @@ header .nav-bottom .nav2 {
 .nav-bottom .nav2 h1 {
     font-size: 4rem;
 }
-header .scroll-down {
-    
-}
 header .scroll-down button {
     background-color: transparent;
    
@@ -178,14 +169,50 @@ header .scroll-down button a i {
     font-size: 2rem;
 }
  /*main begin*/
-    main .about {
-        background-image: url(img/Ellipse\ 3.png);
-        padding: 100px 0 100px 0;
+ main .container {
+    max-width: 1320px;
+    width: 100%;
+    margin: auto;
+}
+ /*section1 begin*/
+main .section1 .sect1-text h3,
+main .section2 .sect2-text h3 {
+    color: #004191;
+} 
+main .about {
+    background-image: url(img/Ellipse\ 4.png);
+    padding: 100px 0 100px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* rotate: 180deg; */
+}
+main .about .section1 .sect1-text p, main .destination .section2 .sect2-text p {
+    margin-top: 20px;
+}
+main .about .section1 {
+    display: flex;
+    gap: 50px;
+}
+/*section1 end*/
+
+/*section2 begin*/
+main .destination {
+    padding: 100px 0 100px 0;
+}
+main .destination .section2 {
+    display: flex;
+    gap: 50px;
+}
+
+/*section2 end*/
+
+/*section3 begin*/
+    .section3 h2 {
+        color: #004191;
+        text-align: center;
     }
-    main .about .section1 {
-        display: flex;
-        gap: 50px;
-    }
+/*section3 end*/
+
  /*main end*/
 
 
