@@ -67,6 +67,47 @@ header {
     padding: 0 20px;
     font-size: 1.3rem;
 }
+
+/*hover lang drop-down*/
+.lang-globe {
+    position: relative;
+    /* display: inline-block; */
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    /* min-width: 120px; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: translate(-160px, -40px);
+  }
+  .dropdown-content ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 0px;
+  }
+  .dropdown-content ul li {
+    list-style: none;
+  }
+  .dropdown-content ul li:nth-child(1) a {
+    color: red !important;
+  }
+  .dropdown-content ul li a {
+    color: #004191 !important;
+  }
+  .dropdown-content ul li a:hover {
+    color: red !important;
+    transition: .7s;
+  }
+  .lang-globe:hover .dropdown-content {
+    display: block;
+  }
+/*hover lang drop-down*/
+
 .nav-menu .nav1 a {
     color: white;
 }
@@ -183,7 +224,8 @@ main .about {
     background-image: url(img/Ellipse\ 4.png);
     padding: 100px 0 100px 0;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+
     /* rotate: 180deg; */
 }
 main .about .section1 .sect1-text p, main .destination .section2 .sect2-text p {
@@ -192,7 +234,10 @@ main .about .section1 .sect1-text p, main .destination .section2 .sect2-text p {
 main .about .section1 {
     display: flex;
     gap: 50px;
+      
+    
 }
+
 /*section1 end*/
 
 /*section2 begin*/
