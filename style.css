@@ -80,6 +80,7 @@ header {
     background-color: #f9f9f9;
     /* min-width: 120px; */
     box-shadow: 0 0 8px rgb(214, 210, 210);
+    /* border-radius: 5px 50% 50% 5px; */
     border-radius: 5px;
     z-index: 1;
     transform: translate(-160px, -40px);
@@ -277,6 +278,11 @@ main .destination .section2 {
     width: 100%;
     margin: 0px auto 30px auto;
   }
+  .manshet_appartment h2 {
+    color: #004191;
+    text-align: center;
+    margin: 40px 0;
+  }
   
   .manshet_appartment .gallery-top {
     display: block;
@@ -291,6 +297,7 @@ main .destination .section2 {
     margin: 10px auto;
     position: absolute;
     right: 0;
+    bottom: 160px;
   }
   
   .sld_img {
@@ -367,7 +374,13 @@ main .destination .section2 {
     object-fit: cover;
     transition: all 0.3s ease;
   }
+ 
+  .manshet_appartment .gallery-thumbs {
+    /* height: 350px; */
+    width: 50%;
   
+  }
+
   .swiper-slide-thumb-active div.thumb-number {
     color: #FFD32A;
     border-bottom: 2px solid #FFD32A;
@@ -400,24 +413,31 @@ main .destination .section2 {
     bottom: 10px;
     top: auto;
     opacity: 1;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 50%;
   }
   
   .manshet_appartment .swiper-button-next {
-    background-image: url("../img/next.svg");
+    /* background-image: url("img/next.svg"); */
     right: 20px;
+    text-align: center;
+    padding: 6px;
   }
   
   .manshet_appartment .swiper-button-prev {
-    background-image: url("../img/prev.svg");
+    background-image: url("img/left-arrow-svgrepo-com.svg");
     left: auto;
     right: 70px;
+    
+    padding: 6px;
+    text-align: center;
+    
   }
   
+  
   .manshet_appartment .swiper-slide.swiper-slide-visible.swiper-slide-active {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
   }
   
   .manshet_appartment .swiper-slide.swiper-slide-prev {

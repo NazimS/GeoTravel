@@ -59,3 +59,31 @@ $(document).ready(function () {
 });
 
 // slider end
+
+  // let mainImage = document.getElementById("mainImage");
+  // let smallImage = document.getElementsByClassName("thumb_img");
+
+  // smallImage[0].onclick = () => {
+  //   mainImage.src = smallImage[0].src;
+  // }
+  // smallImage[1].onclick = () => {
+  //   mainImage.src = smallImage[1].src;
+  // }
+  // smallImage[2].onclick = () => {
+  //   mainImage.src = smallImage[2].src;
+  // }
+  // smallImage[3].onclick = () => {
+  //   mainImage.src = smallImage[3].src;
+  // }
+  // smallImage[4].onclick = () => {
+  //   mainImage.src = smallImage[4].src;
+  // }
+  // smallImage[5].onclick = () => {
+  //   mainImage.src = smallImage[5].src;
+  // }
+  // smallImage[6].onclick = () => {
+  //   mainImage.src = smallImage[6].src;
+  // }
+  // smallImage[7].onclick = () => {
+  //   mainImage.src = smallImage[7].src;
+  // }
