@@ -50,12 +50,19 @@ $(document).ready(function () {
   var galleryTop = new Swiper('div.manshet_appartment .gallery-top', {
     spaceBetween: 16,
     loop: true,
-    loopedSlides: 4, //looped slides should be the same
+    loopedSlides: 4, //looped slides should be the same 
     thumbs: {
       swiper: galleryThumbs,
     },
     effect: 'fade',
   });
+  $('div.manshet_appartment .swiper-slide').on('click', function (e) {
+    e.preventDefault();
+    galleryTop.slideTo($(this).index());
+  });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
+  /// end manshet slider ///
 });
 
 // slider end
