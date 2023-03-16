@@ -253,16 +253,6 @@ main .destination .section2 {
 }
 
 /*section2 end*/
-
-/*section3 begin*/
-
-
-  
-
-
-
-
-/*section3 end*/
   
 * {
   box-sizing: border-box;
@@ -276,7 +266,7 @@ main .destination .section2 {
   clear: both;
 }
 
-
+/*section3 begin*/
 /* ==== MANSHET PART START -------- */
 
 .manshet_appartment {
@@ -288,62 +278,6 @@ main .destination .section2 {
   margin: 0px auto 30px auto;
 }
 
-/* div.manshet-content {
-  display: flex;
-  position: absolute;
-  flex-wrap: wrap;
-  padding: 20px 20px 20px 20px;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  align-items: flex-end;
-  justify-content: flex-end;
-  opacity: 1;
-}
-
-.apartm_info {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 20px;
-  margin: 0 0 0 10px;
-  text-align: left;
-  text-align: center;
-  font-family: 'Montserrat';
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 0px;
-  color: #0E1013;
-  opacity: 1;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-  opacity: 1;
-}
-
-.apartm_info::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 6px;
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-.aprt_video_icon::before {
-  background-image: url("../img/foto_icon.svg");
-}
-
-.aprt_foto_icon::before {
-  background-image: url("../img/foto_icon.svg");
-}
-
-.aprt_plan_icon::before {
-  background-image: url("../img/foto_icon.svg");
-} */
-
 .manshet_appartment .gallery-top {
   display: block;
   width: 100%;
@@ -351,7 +285,11 @@ main .destination .section2 {
   /* height: 550px; */
   max-height: 700px;
 }
-
+.section3 h2 {
+  color: #004191;
+  text-align: center;
+  margin: 40px 0;
+}
 .manshet_appartment .gallery-thumbs {
   display: block;
   width: 71%;
@@ -540,17 +478,110 @@ main .destination .section2 {
 
 
 /* ==== MANSHET PART FINISH -------- */
+/*section3 end*/
 
 /*section4 begin*/
   main .section4 {
-    margin: 50px 0 0 0;
+    padding: 70px 0 0 0;
   }
   main .section4 h2 {
     text-align: center;
     color: #004191;
     padding-bottom: 30px;
+    margin-bottom: 50px;
 }
+main .section4 .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 10px; */
+}
+main .section4 .cards .card {
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    border: none;
+    width: 30%;
+    gap: 15px;   
+}
+main .section4 .cards .card .foto-card {
+  position: relative;
+}
+main .section4 .cards .card .foto-card .blue-blur {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #0072FF;
+  filter: blur(17px);
+}
+main .section4 .cards img {
+  width: 90px;
+  height: 90px; 
+}
+main .section4 .cards .card h3 {color: #004191;}
 /*section4 end*/
+
+/*section5 begin*/
+main .section5 {
+  margin: 100px 0 0 0;
+}
+main .section5 h2 {
+  text-align: center;
+  color: #004191;
+  padding-bottom: 70px;
+  margin-bottom: 80px;
+}
+main .section5 .reference-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 60px 40px 60px 40px;
+  border: 1px solid red;
+
+}
+main .section5 .reference-card .card {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  padding: 90px 30px 30px 30px;
+ 
+  /* width: 20%; */
+  gap: 15px;   
+}
+.section5 .reference-card .card .text-card p {
+  height: 200px;
+  font-size: .8rem;
+  text-align: justify;
+}
+.section5 .reference-card .card .foto-card {
+  position: absolute;
+  padding: 10px;
+  /* border: 1px solid green; */
+  transform: translate(-80px, -90px);
+}
+.section5 .reference-card .card .foto-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* border: 1px solid red; */
+  box-shadow: 0 0 8px grey;
+}
+
+.section5 .reference-card .card .text-card .card-foot {
+  position: absolute;
+  bottom: 5px;
+}
+.section5 .reference .card .text-card .card-foot h4 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 21px;
+    
+    color: #004191;
+}
+/*section5 end*/
 
  /*main end*/
 

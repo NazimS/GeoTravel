@@ -24,9 +24,9 @@ function myFunction() {
 // navbar fixed, scroll top end
 
 
-// slider begin
+// slider-top begin
 
-$(document).ready(function () {
+$(() => {
   /// manshet slider ///
   var galleryThumbs = new Swiper('div.manshet_appartment .gallery-thumbs', {
     spaceBetween: 16,
@@ -63,7 +63,30 @@ $(document).ready(function () {
     galleryTop.controller.control = galleryThumbs;
     galleryThumbs.controller.control = galleryTop;
   /// end manshet slider ///
+
+  //reference-slide begin
+  $(".reference-card").owlCarousel({  // for second slider( add some class(shop-slider) into 'owl-carousel')
+    items: 1,
+    margin: 10,
+    loop: true,
+    autoplayHoverPause: true, // stop loop during hovering mouse
+    responsiveClass: true,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      600: {
+        items: 3,  // amount of items
+      },
+      1000: {
+        items: 5,
+      },
+    },
+  });
+  //reference-slide end
 });
 
-// slider end
+// slider-top end
 
