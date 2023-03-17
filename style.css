@@ -529,37 +529,37 @@ main .section5 {
 main .section5 h2 {
   text-align: center;
   color: #004191;
-  padding-bottom: 70px;
-  margin-bottom: 80px;
+  /* padding-bottom: 70px; */
+  margin-bottom: 50px;
 }
 main .section5 .reference-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 60px 40px 60px 40px;
-  border: 1px solid red;
+  padding: 20px 0;
+  position: relative;
 
 }
 main .section5 .reference-card .card {
-  position: relative;
+  /* position: relative; */
   text-align: center;
   align-items: center;
-  padding: 90px 30px 30px 30px;
- 
-  /* width: 20%; */
+  padding: 40px 20px;
+  margin-top: 50px;
+  margin-right: 10px;
   gap: 15px;   
 }
 .section5 .reference-card .card .text-card p {
   height: 200px;
+  line-height: 25px;
   font-size: .8rem;
   text-align: justify;
 }
 .section5 .reference-card .card .foto-card {
   position: absolute;
   padding: 10px;
-  /* border: 1px solid green; */
-  transform: translate(-80px, -90px);
+  transform: translate(-90px, -90px);
 }
 .section5 .reference-card .card .foto-card img {
   width: 70px;
@@ -574,12 +574,28 @@ main .section5 .reference-card .card {
   position: absolute;
   bottom: 5px;
 }
-.section5 .reference .card .text-card .card-foot h4 {
+.section5 .reference-card .card .text-card .card-foot h4 {
     font-weight: 600;
     font-size: 12px;
-    line-height: 21px;
-    
+    line-height: 21px; 
     color: #004191;
+}
+.section5 .owl-carousel .owl-nav.disabled {
+  display: block;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.section5 .owl-carousel .owl-nav.disabled .owl-prev, .section5 .owl-carousel .owl-nav.disabled  .owl-next {
+  width: 40px;
+  height: 40px;
+  border: 1px solid red;
+  border-radius: 50%;
+
+}
+.section5 .owl-carousel .owl-nav.disabled button span {
+  font-size: 1.5rem;
 }
 /*section5 end*/
 

@@ -28,7 +28,7 @@ function myFunction() {
 
 $(() => {
   /// manshet slider ///
-  var galleryThumbs = new Swiper('div.manshet_appartment .gallery-thumbs', {
+  let galleryThumbs = new Swiper('div.manshet_appartment .gallery-thumbs', {
     spaceBetween: 16,
     slidesPerView: 4,
     loop: true,
@@ -47,7 +47,7 @@ $(() => {
       disableOnInteraction: false,
     },
   });
-  var galleryTop = new Swiper('div.manshet_appartment .gallery-top', {
+  let galleryTop = new Swiper('div.manshet_appartment .gallery-top', {
     spaceBetween: 16,
     loop: true,
     loopedSlides: 4, //looped slides should be the same 
@@ -72,7 +72,10 @@ $(() => {
     autoplayHoverPause: true, // stop loop during hovering mouse
     responsiveClass: true,
     autoplay: true,
+    // loopedSlides 4,
     autoplayTimeout: 2500,
+    navigation: true,
+    navigationText: ["<img src='img/left-vector.png'>","<img src='img/right-vector.png'>"],
     responsive: {
       0: {
         items: 2,
@@ -81,7 +84,7 @@ $(() => {
         items: 3,  // amount of items
       },
       1000: {
-        items: 5,
+        items: 4,
       },
     },
   });
