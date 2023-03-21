@@ -75,9 +75,10 @@ header {
 
 .nav-menu .nav1 {
   display: flex;
-  align-items: center;
+  width: 200px;
+  /* align-items: center;
   justify-content: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
   gap: 10px;
   font-size: 1.2rem;
 }
@@ -256,7 +257,8 @@ header .scroll-down button a i {
 }
 
 /*main begin*/
-body .container {
+main .container,
+footer .container {
   max-width: 1320px;
   width: 100%;
   margin: auto;
@@ -698,10 +700,11 @@ main .section5 .reference-card .card {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 50px;
 }
 
 .section6 .connection .contact-left {
-  max-width: 45%;
+  /* max-width: 45%; */
   padding: 10px;
 }
 
@@ -743,14 +746,14 @@ textarea {
 .section6 .connection .contact-right {
   /* max-width: 45%; */
   background-image: url(img/Ellipse\ 14.png);
-  padding: 70px;
+  padding: 70px 50px;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: rgba(178, 208, 244, 0.7);
 }
 
 .section6 .connection .contact-right img {
-  max-width: 450px;
+  max-width: 550px;
 
 }
 
@@ -782,7 +785,7 @@ footer .ellipse p {
   position: absolute;
   top: 40px;
   text-align: center;
-  z-index: 99;
+  /* z-index: 99; */
   right: 0;
   left: 0;
   transform: translate(0, 50%);
@@ -1017,4 +1020,83 @@ footer .foot .subs-2 .soc-net a i:hover {
 
 /* connect end*/
 /*footer end*/
-@media (max-width: 768px) {}
+
+/*Responsive design begin*/
+
+@media (min-width: 992px) {
+  header .container {
+    /* max-width: 860px; */
+  }
+}
+
+
+@media (max-width: 992px) {
+  .about .bg-1 .section1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .destination .section2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section6 .connection {
+    flex-direction: column-reverse;
+
+  }
+
+  .section6 .connection .contact-right {
+    width: 100%;
+    background-size: 100% 100%;
+    padding: 30px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section6 .connection .contact-left {
+    width: 100%;
+  }
+
+  footer .foot {
+    flex-direction: column;
+  }
+
+  footer .foot .subs-1 {
+    width: 100%;
+  }
+
+  footer .foot .subs-2 {
+    width: 100%;
+  }
+
+  footer .foot .subs-2 .subs-nav {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  footer .ellipse p {
+    top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .basliq-blur .nav-menu .nav1 .lang-globe a {
+    display: none;
+  }
+
+  header .basliq-blur .nav-bottom .nav2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 565px) {}
+
+/*Responsive design end*/

@@ -1,6 +1,6 @@
 
 // navbar fixed, scroll top begin
-window.onscroll = function (){myFunction()} 
+window.onscroll = function () { myFunction() }
 
 const topnav = document.querySelector(".nav-menu");
 let sticky = topnav.offsetTop;
@@ -9,19 +9,37 @@ function myFunction() {
 
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 
-      topnav.classList.add("sticky");
-      document.querySelector(".connect-chevron").style.display = "block";
+    topnav.classList.add("sticky");
+    document.querySelector(".connect-chevron").style.display = "block";
 
   } else {
 
-      topnav.classList.remove("sticky");
-      document.querySelector(".connect-chevron").style.display = "none";
-      
+    topnav.classList.remove("sticky");
+    document.querySelector(".connect-chevron").style.display = "none";
+
   }
 
 }
 
 // navbar fixed, scroll top end
+
+// scroll to next begin
+
+
+
+// $(() => {
+//   if ($('.scroll-down').length > 0) {
+//     $(".scroll-down button").click(function () {
+//       $('html, body').animate({
+//         scrollTop:
+//           $(this).closest("section").next().offset().top
+//       }, "slow");
+//     });
+//   }
+// })
+
+// scroll to next end
+
 
 
 // slider-top begin
@@ -60,8 +78,8 @@ $(() => {
     e.preventDefault();
     galleryTop.slideTo($(this).index());
   });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
+  galleryTop.controller.control = galleryThumbs;
+  galleryThumbs.controller.control = galleryTop;
   /// end manshet slider ///
 
   //reference-slide begin
@@ -75,7 +93,7 @@ $(() => {
     // loopedSlides 4,
     autoplayTimeout: 2500,
     navigation: true,
-    navigationText: ["<img src='img/left-vector.png'>","<img src='img/right-vector.png'>"],
+    navigationText: ["<img src='img/left-vector.png'>", "<img src='img/right-vector.png'>"],
     responsive: {
       0: {
         items: 2,
