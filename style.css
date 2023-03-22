@@ -268,6 +268,7 @@ footer .container {
 main .section1 .sect1-text h3,
 main .section2 .sect2-text h3 {
   color: #004191;
+
 }
 
 main .about {
@@ -287,8 +288,6 @@ main .destination .section2 .sect2-text p {
 main .about .section1 {
   display: flex;
   gap: 50px;
-
-
 }
 
 /*section1 end*/
@@ -564,6 +563,10 @@ main .section4 .cards .card {
   gap: 15px;
 }
 
+main .section4 .cards .card .text-card p {
+  color: grey;
+}
+
 main .section4 .cards .card .foto-card {
   position: relative;
 }
@@ -622,7 +625,7 @@ main .section5 .reference-card .card {
 
 .section5 .reference-card .card .text-card p {
   height: 200px;
-  line-height: 25px;
+  line-height: 22px;
   font-size: .8rem;
   text-align: justify;
 }
@@ -630,7 +633,7 @@ main .section5 .reference-card .card {
 .section5 .reference-card .card .foto-card {
   position: absolute;
   padding: 10px;
-  transform: translate(-90px, -90px);
+  transform: translate(-75px, -90px);
 }
 
 .section5 .reference-card .card .foto-card img {
@@ -768,6 +771,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat; */
   position: relative;
+
 }
 
 footer .ellipse {
@@ -775,6 +779,7 @@ footer .ellipse {
   right: 0;
   left: 0;
   bottom: 0;
+
 }
 
 footer .ellipse img {
@@ -795,7 +800,7 @@ footer .ellipse p {
 footer .subscribe {
   margin-top: 50px;
   padding: 100px 0;
-  box-shadow: 0 0 6px rgb(186, 183, 183);
+  border-top: 1px solid rgb(186, 183, 183);
 }
 
 footer .foot {
@@ -1023,14 +1028,15 @@ footer .foot .subs-2 .soc-net a i:hover {
 
 /*Responsive design begin*/
 
-@media (min-width: 992px) {
-  header .container {
-    /* max-width: 860px; */
+@media (max-width:1199px) {
+  footer .ellipse p {
+    top: 20px;
+    transition: .5s;
   }
 }
 
 
-@media (max-width: 992px) {
+@media (max-width:1099px) {
   .about .bg-1 .section1 {
     flex-direction: column;
     justify-content: center;
@@ -1042,6 +1048,17 @@ footer .foot .subs-2 .soc-net a i:hover {
     justify-content: center;
     align-items: center;
   }
+}
+
+@media (min-width: 992px) {
+  header .container {
+    /* max-width: 860px; */
+  }
+}
+
+
+@media (max-width: 992px) {
+
 
   .section6 .connection {
     flex-direction: column-reverse;
@@ -1084,7 +1101,7 @@ footer .foot .subs-2 .soc-net a i:hover {
 }
 
 @media (max-width: 768px) {
-  header .basliq-blur .nav-menu .nav1 .lang-globe a {
+  header .basliq-blur .nav-menu .nav1 .lang-globe {
     display: none;
   }
 
@@ -1095,8 +1112,111 @@ footer .foot .subs-2 .soc-net a i:hover {
     align-items: center;
     text-align: center;
   }
+
+  .section4 .cards {
+    flex-direction: column;
+  }
+
+  .section4 .cards .card {
+    width: 60% !important;
+  }
+
+  .section5 .reference-card .card .text-card p {
+    line-height: 18px;
+    transition: .5s;
+  }
+
+  .section5 .reference-card .card .foto-card {
+    transform: translate(0px, -90px);
+  }
+
+  footer .ellipse p {
+    top: 5px;
+    transition: .5s;
+    font-size: .9rem;
+  }
 }
 
-@media (max-width: 565px) {}
+@media (max-width: 670px) {
+
+  .about .section1 .sect1-foto img {
+    width: 100%;
+  }
+
+  .destination .section2 .sect2-foto img {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 620px) {
+  .section6 .connection .contact-right img {
+    max-width: 400px;
+    transition: .5s all ease-in-out;
+  }
+
+  footer .ellipse p {
+    top: 0;
+  }
+
+  .nav-bottom .nav2 p {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 565px) {
+  header .nav-menu .logo {
+    /* justify-content: space-evenly; */
+    /* gap: 50px; */
+  }
+
+  header .nav-menu .logo .nav1 {
+    justify-content: center;
+  }
+
+  header .nav-menu .logo .foto img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 460px) {
+  .section6 .connection .contact-right img {
+    max-width: 340px;
+  }
+
+  .section5 .reference-card .card .text-card p {
+    line-height: 15px;
+  }
+
+  .section4 .cards .card {
+    width: 100% !important;
+  }
+
+  footer .ellipse img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 410px) {
+  .section6 .connection .contact-right img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 395px) {
+  .sticky .logo .foto img:nth-child(2) {
+    width: 150px;
+  }
+}
+
+@media (max-width: 376px) {
+  footer .foot .subs-2 .subs-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 /*Responsive design end*/

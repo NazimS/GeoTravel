@@ -96,9 +96,12 @@ $(() => {
     navigationText: ["<img src='img/left-vector.png'>", "<img src='img/right-vector.png'>"],
     responsive: {
       0: {
+        items: 1,
+      },
+      410: {
         items: 2,
       },
-      600: {
+      680: {
         items: 3,  // amount of items
       },
       1000: {
