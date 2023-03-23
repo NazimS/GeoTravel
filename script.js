@@ -20,30 +20,24 @@ function myFunction() {
   }
 
 }
-
 // navbar fixed, scroll top end
 
-// scroll to next begin
 
+// change burger icon to 'x' begin
 
+const rightMenu = document.querySelector('.right-menu')
+const menuBurg = document.querySelector('.burger-menu');
+const menOpn = document.querySelector('.menu-open');
 
-// $(() => {
-//   if ($('.scroll-down').length > 0) {
-//     $(".scroll-down button").click(function () {
-//       $('html, body').animate({
-//         scrollTop:
-//           $(this).closest("section").next().offset().top
-//       }, "slow");
-//     });
-//   }
-// })
+rightMenu.addEventListener('click', () => {
+  menuBurg.classList.toggle('activated')
+  menOpn.classList.toggle('actived')
+})
 
-// scroll to next end
-
+// change burger icon to 'x' end
 
 
 // slider-top begin
-
 $(() => {
   /// manshet slider ///
   let galleryThumbs = new Swiper('div.manshet_appartment .gallery-thumbs', {
