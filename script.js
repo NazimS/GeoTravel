@@ -28,13 +28,43 @@ function myFunction() {
 const rightMenu = document.querySelector('.right-menu')
 const menuBurg = document.querySelector('.burger-menu');
 const menOpn = document.querySelector('.menu-open');
+const showMenu = document.querySelector('.show-menu');
 
 rightMenu.addEventListener('click', () => {
   menuBurg.classList.toggle('activated')
   menOpn.classList.toggle('actived')
+  showMenu.classList.toggle('aktiv')
+
+  // showMenu.style.visibility = "visible"
+
+
+  // if (showMenu.style.visibility = "hidden") {
+  //   showMenu.style.visibility = "visible"
+  // } else {
+  //   showMenu.style.visibility = "hidden"
+  // }
+  // showMenu.style.visibility = "visible"
 })
 
 // change burger icon to 'x' end
+
+// 'open-menu' begin
+
+// $(() => {
+//   $(".right-menu").click(function () {
+//     $(".show-menu").animate({   // right to left
+//       width: "toggle"
+//     });
+
+//   });
+//   $(".right-menu").click(function () {
+//     $(".show-menu").animate({  // left to right
+//       width: "toggle"
+//     });
+//   });
+// });
+
+// 'open-menu' end
 
 
 // slider-top begin
