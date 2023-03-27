@@ -101,9 +101,6 @@ $(() => {
       0: {
         items: 1,
       },
-      // 410: {
-      //   items: 2,
-      // },
       768: {
         items: 3,  // amount of items
       },

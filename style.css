@@ -288,7 +288,7 @@ body .show-menu {
 .logo-fixed.aktiv {
   display: block !important;
   width: 215px;
-  height: 101px;
+  /* height: 101px; */
   object-fit: cover;
   transition: 1s !important;
 }
@@ -1403,7 +1403,7 @@ footer .foot .subs-2 .soc-net a i:hover {
   }
 
   header .nav-menu .logo .foto img {
-    width: 150px;
+    max-width: 150px;
   }
 }
 
