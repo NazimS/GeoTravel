@@ -23,49 +23,28 @@ function myFunction() {
 // navbar fixed, scroll top end
 
 
-// change burger icon to 'x' begin
+// 'change burger icon and open-menu' begin
 
 const rightMenu = document.querySelector('.right-menu')
 const menuBurg = document.querySelector('.burger-menu');
 const menOpn = document.querySelector('.menu-open');
 const showMenu = document.querySelector('.show-menu');
+const body = document.querySelector("body");
+const normalLogo = document.querySelector('.logo-normal');
+const fixedLogo = document.querySelector('.logo-fixed');
 
 rightMenu.addEventListener('click', () => {
+
   menuBurg.classList.toggle('activated')
   menOpn.classList.toggle('actived')
   showMenu.classList.toggle('aktiv')
+  body.classList.toggle('aktiv')
+  normalLogo.classList.toggle('aktiv')
+  fixedLogo.classList.toggle('aktiv')
 
-  // showMenu.style.visibility = "visible"
-
-
-  // if (showMenu.style.visibility = "hidden") {
-  //   showMenu.style.visibility = "visible"
-  // } else {
-  //   showMenu.style.visibility = "hidden"
-  // }
-  // showMenu.style.visibility = "visible"
 })
 
-// change burger icon to 'x' end
-
-// 'open-menu' begin
-
-// $(() => {
-//   $(".right-menu").click(function () {
-//     $(".show-menu").animate({   // right to left
-//       width: "toggle"
-//     });
-
-//   });
-//   $(".right-menu").click(function () {
-//     $(".show-menu").animate({  // left to right
-//       width: "toggle"
-//     });
-//   });
-// });
-
-// 'open-menu' end
-
+// 'change burger icon and open-menu' end
 
 // slider-top begin
 $(() => {
@@ -122,10 +101,10 @@ $(() => {
       0: {
         items: 1,
       },
-      410: {
-        items: 2,
-      },
-      680: {
+      // 410: {
+      //   items: 2,
+      // },
+      768: {
         items: 3,  // amount of items
       },
       1000: {

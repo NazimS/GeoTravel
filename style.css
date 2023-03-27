@@ -3,14 +3,14 @@
 * {
   font-family: 'Noto Serif', serif;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 header {
   background-image: url(img/header-bg.png);
-  /* max-width: 1683px; */
-  /* max-height: 100vh; */
   height: 100vh;
-  /* height: 867px; */
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -24,15 +24,11 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  /* position: relative; */
   display: flex;
   flex-direction: column;
 }
 
 header .nav-menu {
-  /* position: absolute; */
-  /* position: relative;
-  z-index: 99; */
   z-index: 99;
 }
 
@@ -51,7 +47,6 @@ header .nav-menu {
   position: fixed;
   top: 0;
   width: 100%;
-  /* opacity: .9; */
   z-index: 99;
   background-color: white;
   box-shadow: 0 0 3px grey;
@@ -83,9 +78,6 @@ header .nav-menu {
 .nav-menu .nav1 {
   display: flex;
   width: 200px;
-  /* align-items: center;
-  justify-content: center;
-  justify-content: space-evenly; */
   gap: 10px;
   font-size: 1.2rem;
 }
@@ -98,11 +90,9 @@ header .nav-menu {
 /*hover lang drop-down*/
 .lang-globe {
   position: relative;
-  /* display: inline-block; */
 }
 
 .dropdown-content {
-  /* display: none; */
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -146,7 +136,7 @@ header .nav-menu {
 }
 
 .lang-globe:hover .fa-globe {
-  color: #004191;
+  color: #5eb6c6;
   transition: .7s ease-in;
 }
 
@@ -165,26 +155,21 @@ header .nav-menu {
   height: 30px;
   border-radius: 30px;
   cursor: pointer;
-
-  /* overflow: hidden; */
 }
 
 .burger-menu.activated .bar1 {
-  /* width: 100%; */
   width: 50%;
   rotate: 45deg;
 }
 
 .burger-menu.activated .bar2 {
   rotate: 135deg;
-
 }
 
 .burger-menu.activated .bar3 {
   rotate: 45deg;
   width: 50%;
   margin-left: 14px;
-
 }
 
 .right-menu .burger-menu.activated .bar1 {
@@ -195,11 +180,9 @@ header .nav-menu {
   transform: translateY(0);
 }
 
-
 .burger-menu div {
   display: block;
   position: absolute;
-  /* width: 100%; */
   height: 2.7px;
   background-color: white;
   transition: all .5s ease;
@@ -207,7 +190,6 @@ header .nav-menu {
 }
 
 .burger-menu .bar1 {
-  /* top: 6px; */
   width: 35%;
   z-index: 99;
 }
@@ -260,7 +242,6 @@ header .nav-menu {
 }
 
 .right-menu:hover .menu-open.actived span:nth-child(2) {
-  /* cursor: pointer; */
   visibility: hidden;
   opacity: 0;
 }
@@ -287,35 +268,42 @@ header .nav-menu {
 }
 
 body .show-menu {
-  /* display: none; */
-  /* visibility: hidden; */
   transition: 1s;
   opacity: 0;
-  /* background: #004191; */
+  visibility: hidden;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 100vh;
-  /* border: 3px solid orange; */
-  /* position: relative; */
-  /* position: absolute; */
   position: fixed;
   top: 0;
   z-index: 99;
-  /* right: 0; */
+  right: 0;
+}
+
+.logo-normal.aktiv {
+  display: none;
+}
+
+.logo-fixed.aktiv {
+  display: block !important;
+  width: 215px;
+  height: 101px;
+  object-fit: cover;
+  transition: 1s !important;
 }
 
 .show-menu.aktiv {
-  /* visibility: visible; */
+  visibility: visible;
   opacity: 1;
   transition: 1s;
 }
 
+body.aktiv {
+  overflow: hidden;
+}
 
 body .show-menu .show-left {
-  /* padding-top: 200px;
-  padding-left: 150px; */
-  /* border: 2px solid red; */
   height: 100vh;
   width: 50%;
   display: flex;
@@ -323,6 +311,30 @@ body .show-menu .show-left {
   justify-content: center;
   align-items: center;
   background: white;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+body .show-menu .show-left .langs {
+  display: flex;
+  gap: 20px;
+
+}
+
+.show-left .langs a,
+.show-left .subs-numbers a,
+.show-left .subs-addr h6,
+.show-left .subs-addr p {
+  color: #004191;
+}
+
+.show-left .subs-numbers {
+  display: flex;
+  gap: 25px;
+}
+
+.show-left .subs-addr {
+  padding-right: 80px;
 
 }
 
@@ -332,21 +344,20 @@ body .show-menu .show-left div h1 a {
   text-decoration: none;
 }
 
-body .show-menu .show-left div:not(:first-child) h1:hover a {
-  /* color: #004191; */
-  color: orangered;
-  transition: .5s all ease-in-out;
-}
-
-body .show-menu .show-left div:first-child h1 a {
-  color: grey;
+body .show-menu .show-left .home-navi h1 a {
+  color: #004191;
   font-weight: bold;
 }
 
-body .show-menu .show-left div:not(:first-child) h1 a {
-  text-shadow: 0 0 8px rgb(68, 67, 67);
+body .show-menu .show-left .navi-gators h1 a {
+  text-shadow: 0 0 8px rgb(35, 33, 33);
   color: white;
   font-weight: bold;
+}
+
+body .show-menu .show-left .navi-gators:hover h1 a {
+  color: #004191;
+  transition: .5s all ease-in-out;
 }
 
 body .show-menu .show-right {
@@ -356,9 +367,8 @@ body .show-menu .show-right {
   align-items: center;
   flex-direction: column;
   background: #004191;
-  /* border: 1px solid #FFD32A; */
   width: 50%;
-  /* background-color: #004191; */
+  padding-top: 50px;
 }
 
 .show-right .subs-numbers {
@@ -368,7 +378,6 @@ body .show-menu .show-right {
 
 .show-right .subs-numbers a {
   color: white;
-  /* text-decoration: none; */
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -393,7 +402,6 @@ body .show-menu .show-right {
 .show-right .soc-net a:hover i {
   cursor: pointer;
   color: #62a9ff;
-  /* filter: blur(1px); */
   transition: .5s ease-out;
 }
 
@@ -462,8 +470,6 @@ main .about {
   padding: 100px 0 100px 0;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-
-  /* rotate: 180deg; */
 }
 
 main .about .section1 .sect1-text p,
@@ -490,12 +496,6 @@ main .destination .section2 {
 
 /*section2 end*/
 
-* {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
 .clearfix::after {
   display: block;
   content: "";
@@ -503,8 +503,8 @@ main .destination .section2 {
 }
 
 /*section3 begin*/
-/* ==== MANSHET PART START -------- */
 
+/* Manshet part begin*/
 .manshet_appartment {
   display: flex;
   flex-wrap: wrap;
@@ -518,7 +518,6 @@ main .destination .section2 {
   display: block;
   width: 100%;
   margin: 0px auto;
-  /* height: 550px; */
   max-height: 700px;
 }
 
@@ -535,7 +534,6 @@ main .destination .section2 {
   margin: 10px auto;
   position: absolute;
   right: 0;
-  /* height: 300px; */
 }
 
 .sld_img {
@@ -638,14 +636,12 @@ main .destination .section2 {
   height: 40px;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-size: 30px 30px; */
   border: 0;
   outline: 0;
   margin: 0;
   bottom: 10px;
   top: auto;
   opacity: 1;
-  /* background-color: #ffffff; */
   background: transparent;
   transition: .5s ease-in-out;
   border-radius: 50%;
@@ -664,16 +660,13 @@ main .destination .section2 {
 .manshet_appartment .swiper-button-next:hover,
 .manshet_appartment .swiper-button-prev:hover {
   background-color: #a0cbff;
-  /* background-color: rgb(177, 175, 175); */
 }
 
 .manshet_appartment .swiper-button-next {
-  /* background-image: url("img/next.svg"); */
   right: 20px;
 }
 
 .manshet_appartment .swiper-button-prev {
-  /* background-image: url("img/prev.svg"); */
   left: auto;
   right: 70px;
 }
@@ -718,7 +711,7 @@ main .destination .section2 {
 }
 
 
-/* ==== MANSHET PART FINISH -------- */
+/* Manshet part end */
 /*section3 end*/
 
 /*section4 begin*/
@@ -737,7 +730,6 @@ main .section4 .cards {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 10px; */
 }
 
 main .section4 .cards .card {
@@ -747,6 +739,12 @@ main .section4 .cards .card {
   border: none;
   width: 30%;
   gap: 15px;
+  transition: .5s all ease-in-out;
+  cursor: pointer;
+}
+
+main .section4 .cards .card:hover {
+  transform: translate(0, 10px);
 }
 
 main .section4 .cards .card .text-card p {
@@ -785,7 +783,6 @@ main .section5 {
 main .section5 h2 {
   text-align: center;
   color: #004191;
-  /* padding-bottom: 70px; */
   margin-bottom: 50px;
 }
 
@@ -800,7 +797,6 @@ main .section5 .reference-card {
 }
 
 main .section5 .reference-card .card {
-  /* position: relative; */
   text-align: center;
   align-items: center;
   padding: 40px 20px;
@@ -827,7 +823,6 @@ main .section5 .reference-card .card {
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  /* border: 1px solid red; */
   box-shadow: 0 0 8px grey;
 }
 
@@ -893,7 +888,6 @@ main .section5 .reference-card .card {
 }
 
 .section6 .connection .contact-left {
-  /* max-width: 45%; */
   padding: 10px;
 }
 
@@ -905,7 +899,6 @@ main .section5 .reference-card .card {
   display: flex;
   gap: 10px;
   flex-direction: column;
-  /* max-width: 40%; */
 }
 
 .section6 .connection .contact-left .contact-box .contact-details input,
@@ -928,12 +921,7 @@ textarea {
   border: 1px solid #004191;
 }
 
-/*
-  background: rgba(6, 84, 180, 0.7);
- */
-
 .section6 .connection .contact-right {
-  /* max-width: 45%; */
   background-image: url(img/Ellipse\ 14.png);
   padding: 70px 50px;
   background-size: contain;
@@ -951,11 +939,7 @@ textarea {
 /*main end*/
 
 /*footer begin*/
-
 footer {
-  /* background-image: url(img/Ellipse\ 20.png);
-  background-size: cover;
-  background-repeat: no-repeat; */
   position: relative;
 
 }
@@ -976,7 +960,6 @@ footer .ellipse p {
   position: absolute;
   top: 40px;
   text-align: center;
-  /* z-index: 99; */
   right: 0;
   left: 0;
   transform: translate(0, 50%);
@@ -992,10 +975,8 @@ footer .subscribe {
 footer .foot {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid green; */
   align-items: center;
   padding-bottom: 20px;
-  /* gap: 10px; */
 }
 
 footer .foot .subs-1 {
@@ -1003,13 +984,11 @@ footer .foot .subs-1 {
   flex-direction: column;
   gap: 30px;
   width: 45%;
-  /* border: 1px solid red; */
   padding: 10px;
 }
 
 footer .foot .subs-1 img {
   width: 150px;
-  /* margin-bottom: 20px; */
 }
 
 footer .foot .subs-1 .subs-text h6 {
@@ -1028,7 +1007,6 @@ footer .foot .subs-1 form i {
   padding: 5px;
   color: #2196f3;
   cursor: pointer;
-  /* rotate: 40deg; */
 }
 
 footer .foot .subs-1 input {
@@ -1040,7 +1018,6 @@ footer .foot .subs-1 input {
 footer .foot .subs-2 {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
   padding: 10px;
   gap: 40px;
   width: 45%;
@@ -1069,7 +1046,6 @@ footer .foot .subs-2 .subs-addr h6 {
 
 footer .foot .subs-2 .subs-numbers {
   display: flex;
-  /* justify-content: space-between; */
   justify-content: flex-start;
   gap: 30px;
 }
@@ -1213,6 +1189,19 @@ footer .foot .subs-2 .soc-net a i:hover {
 /*footer end*/
 
 /*Responsive design begin*/
+@media (max-width: 1325px) {
+  body .show-menu .show-right .subs-numbers {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .show-right .numb-socs {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
 
 @media (max-width:1199px) {
   footer .ellipse p {
@@ -1248,6 +1237,21 @@ footer .foot .subs-2 .soc-net a i:hover {
 }
 
 @media (max-width: 992px) {
+
+  body .show-menu .show-left div h1 a {
+    font-size: 2.5rem;
+  }
+
+  body .show-menu .show-left .subs-numbers {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body .show-menu .show-left .subs-addr {
+    text-align: center;
+    padding-right: 0px;
+  }
 
   .section6 .connection {
     flex-direction: column-reverse;
@@ -1289,6 +1293,40 @@ footer .foot .subs-2 .soc-net a i:hover {
 }
 
 @media (max-width: 768px) {
+
+  body .show-menu .show-right {
+    display: none;
+  }
+
+  .burger-menu.activated .bar1,
+  .burger-menu.activated .bar2,
+  .burger-menu.activated .bar3 {
+    background-color: #004191 !important;
+  }
+
+  .menu-open.actived span {
+    color: #004191;
+  }
+
+  body .show-menu .show-left {
+    width: 100%;
+    padding-top: 100px;
+
+  }
+
+  body .show-menu .show-left .langs {
+    visibility: visible;
+  }
+
+  body .show-menu .show-left div h1 a {
+    font-size: 2.5rem;
+    line-height: normal;
+  }
+
+  .show-right .subs-numbers {
+    visibility: visible;
+  }
+
   header .basliq-blur .nav-menu .nav1 .lang-globe {
     display: none;
   }
@@ -1314,8 +1352,9 @@ footer .foot .subs-2 .soc-net a i:hover {
   }
 
   .section5 .reference-card .card .text-card p {
-    line-height: 18px;
+    line-height: 30px;
     transition: .5s;
+    font-size: 1rem;
   }
 
   .section5 .reference-card .card .foto-card {
@@ -1357,7 +1396,6 @@ footer .foot .subs-2 .soc-net a i:hover {
 
 }
 
-
 @media (max-width: 565px) {
 
   header .nav-menu .logo .nav1 {
@@ -1375,7 +1413,7 @@ footer .foot .subs-2 .soc-net a i:hover {
   }
 
   .section5 .reference-card .card .text-card p {
-    line-height: 15px;
+    line-height: 25px;
   }
 
   .section4 .cards .card {
