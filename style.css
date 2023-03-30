@@ -6,15 +6,98 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+
 }
 
-header {
+.header-home {
   background-image: url(img/header-bg.png);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   position: relative;
+}
+
+.header-destination {
+  /* background-image: url(img/destination-header-bg.png); */
+  /* background: transparent; */
+  /* height: 50vh; */
+
+}
+
+.header-destination .logo-normal {
+  width: 215px;
+}
+
+.header-destination .nav-menu .nav1 .lang-globe .fa-globe {
+  color: #004191;
+  transition: .5s;
+}
+
+.header-destination .right-menu .burger-menu .bar1,
+.header-destination .right-menu .burger-menu .bar2,
+.header-destination .right-menu .burger-menu .bar3 {
+  background-color: #004191;
+}
+
+.header-destination .nav-menu .nav1 .right-menu .menu-open span {
+  color: #004191;
+}
+
+/*open menu aktived when navbar is not sticky*/
+
+.header-destination .right-menu.aktiv {
+  z-index: 99;
+}
+
+.header-destination .foto.aktiv {
+  z-index: 99;
+}
+
+.header-destination .lang-globe.aktiv {
+  z-index: 99;
+}
+
+.header-destination .nav-menu .nav1 .lang-globe.aktiv .fa-globe {
+  color: white;
+  z-index: 99;
+}
+
+/*open menu aktived when navbar sticky*/
+.header-destination .nav-menu.sticky .right-menu .burger-menu .bar1,
+.header-destination .nav-menu.sticky .right-menu .burger-menu .bar2,
+.header-destination .nav-menu.sticky .right-menu .burger-menu .bar3 {
+  background-color: #004191 !important;
+}
+
+.header-destination .nav-menu.sticky .nav1 .right-menu .menu-open span {
+  color: #004191 !important;
+}
+
+.header-destination .nav-menu.sticky .nav1 .lang-globe .fa-globe.aktiv {
+  color: #004191;
+}
+
+.destinations {
+  padding-top: 100px;
+}
+
+.destinations .destiny {
+  display: flex;
+  justify-content: space-between;
+}
+
+.destinations .destiny .left-destiny {
+  /* max-width: 300px; */
+  width: 45%;
+
+}
+
+.destinations .right-destiny {
+  display: flex;
+  gap: 10px;
+
+  width: 45%;
 }
 
 .basliq-blur {
@@ -157,19 +240,40 @@ header .nav-menu {
   cursor: pointer;
 }
 
+.nav-menu.sticky .burger-menu.activated .bar1 {
+  width: 50%;
+  rotate: 45deg;
+  background-color: #004191 !important;
+}
+
+.nav-menu.sticky .burger-menu.activated .bar2 {
+  rotate: 135deg;
+  background-color: #004191 !important;
+}
+
+.nav-menu.sticky .burger-menu.activated .bar3 {
+  rotate: 45deg;
+  width: 50%;
+  margin-left: 14px;
+  background-color: #004191 !important;
+}
+
 .burger-menu.activated .bar1 {
   width: 50%;
   rotate: 45deg;
+  background-color: white !important;
 }
 
 .burger-menu.activated .bar2 {
   rotate: 135deg;
+  background-color: white !important;
 }
 
 .burger-menu.activated .bar3 {
   rotate: 45deg;
   width: 50%;
   margin-left: 14px;
+  background-color: white !important;
 }
 
 .right-menu .burger-menu.activated .bar1 {
@@ -260,12 +364,18 @@ header .nav-menu {
   visibility: visible;
   opacity: 1;
   cursor: pointer;
+  color: white !important;
 }
 
 .right-menu .menu-open.actived span:nth-child(1) {
   visibility: hidden;
   opacity: 0;
 }
+
+.nav-menu.sticky .menu-open.actived span {
+  color: #004191 !important;
+}
+
 
 body .show-menu {
   transition: 1s;
@@ -288,7 +398,6 @@ body .show-menu {
 .logo-fixed.aktiv {
   display: block !important;
   width: 215px;
-  /* height: 101px; */
   object-fit: cover;
   transition: 1s !important;
 }

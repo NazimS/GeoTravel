@@ -33,14 +33,22 @@ const body = document.querySelector("body");
 const normalLogo = document.querySelector('.logo-normal');
 const fixedLogo = document.querySelector('.logo-fixed');
 
+const globeIcon = document.querySelector('.fa-globe');
+const lanGlobe = document.querySelector('.lang-globe');
+const logoFoto = document.querySelector('.foto')
+
 rightMenu.addEventListener('click', () => {
 
+  rightMenu.classList.toggle('aktiv')
   menuBurg.classList.toggle('activated')
   menOpn.classList.toggle('actived')
   showMenu.classList.toggle('aktiv')
   body.classList.toggle('aktiv')
   normalLogo.classList.toggle('aktiv')
   fixedLogo.classList.toggle('aktiv')
+  globeIcon.classList.toggle('aktiv')
+  lanGlobe.classList.toggle('aktiv')
+  logoFoto.classList.toggle('aktiv')
 
 })
 
