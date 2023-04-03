@@ -9,6 +9,10 @@
 
 }
 
+body {
+  /* position: relative; */
+}
+
 .header-home {
   background-image: url(img/header-bg.png);
   height: 100vh;
@@ -18,10 +22,9 @@
   position: relative;
 }
 
-.header-destination {
-  /* background-image: url(img/destination-header-bg.png); */
-  /* background: transparent; */
-  /* height: 50vh; */
+.header-destination .nav-menu {
+  position: fixed;
+  width: 100%;
 
 }
 
@@ -76,28 +79,6 @@
 
 .header-destination .nav-menu.sticky .nav1 .lang-globe .fa-globe.aktiv {
   color: #004191;
-}
-
-.destinations {
-  padding-top: 100px;
-}
-
-.destinations .destiny {
-  display: flex;
-  justify-content: space-between;
-}
-
-.destinations .destiny .left-destiny {
-  /* max-width: 300px; */
-  width: 45%;
-
-}
-
-.destinations .right-destiny {
-  display: flex;
-  gap: 10px;
-
-  width: 45%;
 }
 
 .basliq-blur {
@@ -571,8 +552,233 @@ footer .container {
 main .section1 .sect1-text h3,
 main .section2 .sect2-text h3 {
   color: #004191;
-
 }
+
+/*destination page begin*/
+.destinations {
+  background-image: url(img/destination-header-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 200px;
+}
+
+.destinations .destiny .left-destiny h3 {
+  color: #004191;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.destinations .destiny {
+  display: flex;
+  justify-content: space-between;
+}
+
+.destinations .destiny .left-destiny {
+  /* max-width: 300px; */
+  width: 45%;
+}
+
+.destinations .right-destiny {
+  display: flex;
+  gap: 10px;
+  width: 45%;
+}
+
+.countries {
+  margin-top: 100px;
+}
+
+.countries .country-selection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.countries .country-selection .country-left {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  position: relative;
+}
+
+.countries .country-selection .country-left ul li {
+  color: #004191;
+}
+
+.countries .country-selection .country-left button {
+  width: 400px;
+  height: 120px;
+  border: 1px solid #004191;
+  outline: none;
+  /* padding: 10px; */
+  line-height: 27px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  color: #004191;
+  box-shadow: 0 0 8px grey;
+  transition: .5s;
+  margin-bottom: 20px;
+}
+
+.countries .country-selection .country-left button img {
+  width: 40px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.countries .country-selection .country-left button:hover {
+  background: rgb(212, 222, 234);
+}
+
+.countries .country-selection .country-left .button-aze button::before {
+  content: "";
+  width: 20px;
+  height: 100%;
+  background: url(img/ellipse-checked.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 22px;
+  bottom: 0;
+  z-index: 1;
+}
+
+.countries .country-selection .country-left .button-turk button::before {
+  content: "";
+  width: 20px;
+  height: 100%;
+  background: url(img/ellipse-unchecked.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 350px;
+  /*unchecked before*/
+  left: 22px;
+  bottom: 0;
+  z-index: 1;
+}
+
+.countries .country-selection .country-text {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.countries .country-selection .country-text h3 {
+  color: #004191;
+  margin-bottom: 15px;
+}
+
+.inspire {
+  margin-top: 100px;
+}
+
+.inspire h2 {
+  text-align: center;
+  color: #004191;
+  padding-bottom: 80px;
+}
+
+.inspire .gallery-insp {
+  display: flex;
+}
+
+.inspire .gallery-insp div {
+  transition: .3s all ease-in-out;
+  cursor: pointer;
+}
+
+.inspire .gallery-insp div:hover {
+  /* transition: .5s all ease-in-out; */
+  transform: translate(0, -15px);
+}
+
+.inspire .gallery-insp div:nth-child(2n) {
+  margin-top: 50px;
+  /* padding-top: 50px; */
+}
+
+.accomodation {
+  margin-top: 100px;
+}
+
+.accomodation .travel-place .travel-text {
+  width: 45%;
+}
+
+.accomodation .travel-place .travel-text h3 {
+  color: #004191;
+  padding-bottom: 20px;
+}
+
+.accomodation .travel-place .travel-foto {
+  width: 45%;
+}
+
+.accomodation .travel-place .travel-foto img {
+  /* max-width: 630px; */
+  width: 100%;
+}
+
+.accomodation .travel-place {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrive {
+  margin-top: 100px;
+}
+
+.arrive .arriving {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arriving-left {
+  width: 45%;
+}
+
+.arriving-left img {
+  /* max-width: 630px; */
+  width: 100%;
+  max-height: 325px;
+}
+
+.arriving-right {
+  width: 45%;
+  position: relative;
+}
+
+.arriving-right .arrive-basliq {
+  display: flex;
+  gap: 15px;
+}
+
+.arriving-right .arrive-basliq .blue-blur {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #0072FF;
+  filter: blur(12px);
+  left: 10px;
+  top: -10px;
+}
+
+.arriving-right h3 {
+  color: #004191;
+  padding-bottom: 20px;
+}
+
+.arriving-left .section8-foto {
+  /* max-height: 350px; */
+}
+
+/*destination page end*/
 
 main .about {
   background-image: url(img/Ellipse\ 4.png);
