@@ -597,7 +597,7 @@ main .section2 .sect2-text h3 {
   display: flex;
   flex-direction: column;
   width: 45%;
-  position: relative;
+  /* position: relative; */
 }
 
 .countries .country-selection .country-left ul li {
@@ -633,10 +633,15 @@ main .section2 .sect2-text h3 {
   background: rgb(212, 222, 234);
 }
 
+.button-aze,
+.button-turk {
+  position: relative;
+}
+
 .countries .country-selection .country-left .button-aze button::before {
   content: "";
   width: 20px;
-  height: 100%;
+  /* height: 100%; */
   background: url(img/ellipse-checked.png);
   background-repeat: no-repeat;
   position: absolute;
@@ -646,18 +651,66 @@ main .section2 .sect2-text h3 {
   z-index: 1;
 }
 
+.countries .country-selection .country-left .button-aze button.aktiv {
+  width: 300px;
+  border: none;
+}
+
 .countries .country-selection .country-left .button-turk button::before {
   content: "";
   width: 20px;
-  height: 100%;
+  /* height: 100%; */
   background: url(img/ellipse-unchecked.png);
   background-repeat: no-repeat;
   position: absolute;
-  top: 350px;
-  /*unchecked before*/
+  top: 50px;
   left: 22px;
   bottom: 0;
   z-index: 1;
+}
+
+.countries .country-selection .country-left .button-turk button {
+  width: 300px;
+  border: none;
+}
+
+.countries .country-selection .country-left .button-turk button.aktiv {
+  width: 400px;
+  border: 1px solid #004191;
+}
+
+.countries .country-selection .country-left .button-aze button.aktiv::before {
+  content: "";
+  width: 20px;
+  /* height: 100%; */
+  /* background: url(img/ellipse-checked.png); */
+  background: url(img/ellipse-unchecked.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 22px;
+  bottom: 0;
+  z-index: 1;
+}
+
+.countries .country-selection .country-left .button-turk button.aktiv::before {
+  content: "";
+  width: 20px;
+  /* height: 100%; */
+  /* background: url(img/ellipse-unchecked.png); */
+  background: url(img/ellipse-checked.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 22px;
+  bottom: 0;
+  z-index: 1;
+}
+
+.countries .country-selection .country-left .button-turk .turk-cities {
+  display: none;
+  /* visibility: hidden; */
+  /* transition: .5s all ease-in-out; */
 }
 
 .countries .country-selection .country-text {

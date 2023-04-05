@@ -56,6 +56,7 @@ rightMenu.addEventListener('click', () => {
 
 // slider-top begin
 $(() => {
+
   /// manshet slider ///
   let galleryThumbs = new Swiper('div.manshet_appartment .gallery-thumbs', {
     spaceBetween: 16,
@@ -118,7 +119,51 @@ $(() => {
     },
   });
   //reference-slide end
+
 });
 
 // slider-top end
+
+// traveling cities begin
+const azeCities = document.querySelector('.aze-cities');
+const turkCities = document.querySelector('.turk-cities');
+// const turkbtn = document.querySelector('.turkbtn')
+
+/*
+function turkbtn() {
+  if (turkCities.style.display = "none") {
+    turkCities.style.display = "block";
+    // turkCities.style.visibility = visible;
+    // azeCities.style.display = "none";
+  } else {
+    turkCities.style.display = "block"
+  }
+}
+*/
+
+$(() => {
+
+  $(".azebtn").click(function () {
+    $(".turk-cities").slideToggle("slow");
+    $(".aze-cities").slideToggle("slow");
+    $(this).toggleClass("aktiv");
+    $(".turkbtn").toggleClass("aktiv");
+    // $(this).addClass(".aktiv")
+  })
+
+  $(".turkbtn").click(function () {
+    $(".turk-cities").slideToggle("slow");
+    $(".aze-cities").slideToggle("slow");
+    $(this).toggleClass("aktiv");
+    $(".azebtn").toggleClass("aktiv");
+  })
+
+
+
+})
+
+// function azebtn() {
+
+// }
+// traveling cities end
 
