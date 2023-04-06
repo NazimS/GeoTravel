@@ -597,7 +597,6 @@ main .section2 .sect2-text h3 {
   display: flex;
   flex-direction: column;
   width: 45%;
-  /* position: relative; */
 }
 
 .countries .country-selection .country-left ul li {
@@ -609,7 +608,6 @@ main .section2 .sect2-text h3 {
   height: 120px;
   border: 1px solid #004191;
   outline: none;
-  /* padding: 10px; */
   line-height: 27px;
   font-size: 20px;
   display: flex;
@@ -683,7 +681,6 @@ main .section2 .sect2-text h3 {
   content: "";
   width: 20px;
   /* height: 100%; */
-  /* background: url(img/ellipse-checked.png); */
   background: url(img/ellipse-unchecked.png);
   background-repeat: no-repeat;
   position: absolute;
@@ -697,7 +694,6 @@ main .section2 .sect2-text h3 {
   content: "";
   width: 20px;
   /* height: 100%; */
-  /* background: url(img/ellipse-unchecked.png); */
   background: url(img/ellipse-checked.png);
   background-repeat: no-repeat;
   position: absolute;
@@ -709,8 +705,6 @@ main .section2 .sect2-text h3 {
 
 .countries .country-selection .country-left .button-turk .turk-cities {
   display: none;
-  /* visibility: hidden; */
-  /* transition: .5s all ease-in-out; */
 }
 
 .countries .country-selection .country-text {
@@ -736,21 +730,28 @@ main .section2 .sect2-text h3 {
 
 .inspire .gallery-insp {
   display: flex;
+  gap: 10px;
 }
 
 .inspire .gallery-insp div {
   transition: .3s all ease-in-out;
   cursor: pointer;
+  width: 214px;
+  height: 490px;
+}
+
+.inspire .gallery-insp div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .inspire .gallery-insp div:hover {
-  /* transition: .5s all ease-in-out; */
   transform: translate(0, -15px);
 }
 
 .inspire .gallery-insp div:nth-child(2n) {
   margin-top: 50px;
-  /* padding-top: 50px; */
 }
 
 .accomodation {

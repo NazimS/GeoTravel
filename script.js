@@ -24,7 +24,6 @@ function myFunction() {
 
 
 // 'change burger icon and open-menu' begin
-
 const rightMenu = document.querySelector('.right-menu')
 const menuBurg = document.querySelector('.burger-menu');
 const menOpn = document.querySelector('.menu-open');
@@ -39,19 +38,18 @@ const logoFoto = document.querySelector('.foto')
 
 rightMenu.addEventListener('click', () => {
 
-  rightMenu.classList.toggle('aktiv')
-  menuBurg.classList.toggle('activated')
-  menOpn.classList.toggle('actived')
-  showMenu.classList.toggle('aktiv')
-  body.classList.toggle('aktiv')
-  normalLogo.classList.toggle('aktiv')
-  fixedLogo.classList.toggle('aktiv')
-  globeIcon.classList.toggle('aktiv')
-  lanGlobe.classList.toggle('aktiv')
-  logoFoto.classList.toggle('aktiv')
+  rightMenu.classList.toggle('aktiv');
+  menuBurg.classList.toggle('activated');
+  menOpn.classList.toggle('actived');
+  showMenu.classList.toggle('aktiv');
+  body.classList.toggle('aktiv');
+  normalLogo.classList.toggle('aktiv');
+  fixedLogo.classList.toggle('aktiv');
+  globeIcon.classList.toggle('aktiv');
+  lanGlobe.classList.toggle('aktiv');
+  logoFoto.classList.toggle('aktiv');
 
 })
-
 // 'change burger icon and open-menu' end
 
 // slider-top begin
@@ -121,26 +119,9 @@ $(() => {
   //reference-slide end
 
 });
-
 // slider-top end
 
-// traveling cities begin
-const azeCities = document.querySelector('.aze-cities');
-const turkCities = document.querySelector('.turk-cities');
-// const turkbtn = document.querySelector('.turkbtn')
-
-/*
-function turkbtn() {
-  if (turkCities.style.display = "none") {
-    turkCities.style.display = "block";
-    // turkCities.style.visibility = visible;
-    // azeCities.style.display = "none";
-  } else {
-    turkCities.style.display = "block"
-  }
-}
-*/
-
+// destination.httml page, traveling cities begin
 $(() => {
 
   $(".azebtn").click(function () {
@@ -156,14 +137,9 @@ $(() => {
     $(".aze-cities").slideToggle("slow");
     $(this).toggleClass("aktiv");
     $(".azebtn").toggleClass("aktiv");
+
   })
 
-
-
 })
-
-// function azebtn() {
-
-// }
-// traveling cities end
+// destination.httml page, traveling cities end
 
