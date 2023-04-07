@@ -580,7 +580,7 @@ main .section2 .sect2-text h3 {
 
 .destinations .right-destiny {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   width: 45%;
 }
 
@@ -1039,6 +1039,68 @@ main .destination .section2 {
   left: auto;
   right: 70px;
 }
+
+/*Destination page section1 begin*/
+
+.right-destiny .foto1,
+.right-destiny .foto2 {
+  position: relative;
+}
+
+.right-destiny .merkez-text {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: white;
+  transition: .3s;
+}
+
+.right-destiny .cappa-text {
+  position: absolute;
+  bottom: 90px;
+  /* right: 200px; */
+  /* right: 30px; */
+  left: -20px;
+  color: white;
+  rotate: -90deg;
+  transition: .3s;
+}
+
+.right-destiny .button-next,
+.right-destiny .button-prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  transition: .5s ease-in-out;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 2px;
+  text-align: center;
+}
+
+.right-destiny .button-next i,
+.right-destiny .button-prev i {
+  color: white;
+  font-size: 1rem;
+}
+
+.right-destiny .button-next:hover,
+.right-destiny .button-prev:hover {
+  background-color: #a0cbff;
+}
+
+.right-destiny .foto2 .button-next {
+  right: 20px;
+  bottom: 20px
+}
+
+.right-destiny .foto1 .button-prev {
+  right: 20px;
+  bottom: 20px;
+}
+
+/*Destination page section1  end*/
 
 .manshet_appartment .swiper-slide.swiper-slide-visible.swiper-slide-active {
   opacity: 0;
