@@ -9,10 +9,6 @@
 
 }
 
-body {
-  /* position: relative; */
-}
-
 .header-home {
   background-image: url(img/header-bg.png);
   height: 100vh;
@@ -408,7 +404,6 @@ body .show-menu .show-left {
 body .show-menu .show-left .langs {
   display: flex;
   gap: 20px;
-
 }
 
 .show-left .langs a,
@@ -487,12 +482,18 @@ body .show-menu .show-right {
   font-size: 1.6rem;
   color: white;
   text-align: center;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
 }
 
 .show-right .soc-net a:hover i {
   cursor: pointer;
   color: #62a9ff;
   transition: .5s ease-out;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .show-right .numb-socs .subs-addr h6,
@@ -506,7 +507,6 @@ header .nav-bottom {
   bottom: 50px;
   left: 0;
   right: 0;
-
 }
 
 header .nav-bottom .nav2 {
@@ -574,7 +574,6 @@ main .section2 .sect2-text h3 {
 }
 
 .destinations .destiny .left-destiny {
-  /* max-width: 300px; */
   width: 45%;
 }
 
@@ -582,6 +581,145 @@ main .section2 .sect2-text h3 {
   display: flex;
   gap: 15px;
   width: 45%;
+}
+
+.right-destiny .foto1.aktiv,
+.right-destiny .foto1,
+.right-destiny .foto2 {
+  position: relative;
+  overflow-y: hidden;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.foto1 {
+  width: 500px;
+  overflow: hidden;
+}
+
+.foto1.aktiv {
+  width: 700px !important;
+}
+
+.foto1:hover {
+  width: 800px;
+}
+
+.foto1:hover .merkez-text {
+  rotate: 0deg;
+  left: 10px !important;
+}
+
+.right-destiny .foto1.aktiv .merkez-text {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: white;
+  transition: .3s;
+}
+
+.right-destiny .foto1 .merkez-text {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+  color: white;
+  transition: .3s;
+}
+
+.foto1 .button-prev.aktiv {
+  rotate: 180deg;
+}
+
+.foto2.aktiv .button-next.aktiv {
+  rotate: -180deg;
+}
+
+.merkez-text.rotate {
+  rotate: -90deg;
+  bottom: 60px !important;
+  left: -20px !important;
+}
+
+.foto1.aktiv img {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .5s;
+}
+
+.foto1.aktiv:hover {
+  width: 600px;
+  transform: scale(1);
+}
+
+.foto2 {
+  width: 500px;
+  height: 577px;
+}
+
+.foto2.aktiv {
+  width: 800px !important;
+}
+
+.foto2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .5s;
+}
+
+.foto2:hover {
+  width: 650px;
+  transform: scale(1);
+}
+
+.right-destiny .foto2.aktiv .cappa-text { /*aktiv klassinda hover effektini itirmesi ucun eyni seyi :hover-siz yaziriq*/
+  rotate: 0deg;
+  left: 20px;
+}
+
+.right-destiny .foto2:hover .cappa-text {
+  rotate: 0deg;
+  left: 20px;
+}
+
+.right-destiny .cappa-text {
+  position: absolute;
+  bottom: 90px;
+  left: -20px;
+  color: white;
+  rotate: -90deg;
+  transition: .3s;
+}
+
+.right-destiny .button-next,
+.right-destiny .button-prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  transition: .5s ease-in-out;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding: 2px;
+  text-align: center;
+}
+
+.right-destiny .button-next i,
+.right-destiny .button-prev i {
+  color: white;
+  font-size: 1rem;
+}
+
+.right-destiny .button-next:hover,
+.right-destiny .button-prev:hover {
+  background-color: #a0cbff;
+}
+
+.right-destiny .foto2 .button-next,
+.right-destiny .foto1 .button-prev {
+  right: 70px;
+  bottom: 20px
 }
 
 .countries {
@@ -774,6 +912,16 @@ main .section2 .sect2-text h3 {
 .accomodation .travel-place .travel-foto img {
   /* max-width: 630px; */
   width: 100%;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+.accomodation .travel-place .travel-foto img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .accomodation .travel-place {
@@ -800,6 +948,16 @@ main .section2 .sect2-text h3 {
   /* max-width: 630px; */
   width: 100%;
   max-height: 325px;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+.arriving-left img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .arriving-right {
@@ -828,9 +986,6 @@ main .section2 .sect2-text h3 {
   padding-bottom: 20px;
 }
 
-.arriving-left .section8-foto {
-  /* max-height: 350px; */
-}
 
 /*destination page end*/
 
@@ -851,6 +1006,20 @@ main .about .section1 {
   gap: 50px;
 }
 
+main .about .section1 .sect1-foto img {
+  cursor: pointer;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+
+main .about .section1 .sect1-foto img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 /*section1 end*/
 
 /*section2 begin*/
@@ -861,6 +1030,20 @@ main .destination {
 main .destination .section2 {
   display: flex;
   gap: 50px;
+}
+
+main .destination .section2 .sect2-foto img {
+  cursor: pointer;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+
+main .destination .section2 .sect2-foto img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /*section2 end*/
@@ -1040,68 +1223,6 @@ main .destination .section2 {
   right: 70px;
 }
 
-/*Destination page section1 begin*/
-
-.right-destiny .foto1,
-.right-destiny .foto2 {
-  position: relative;
-}
-
-.right-destiny .merkez-text {
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
-  color: white;
-  transition: .3s;
-}
-
-.right-destiny .cappa-text {
-  position: absolute;
-  bottom: 90px;
-  /* right: 200px; */
-  /* right: 30px; */
-  left: -20px;
-  color: white;
-  rotate: -90deg;
-  transition: .3s;
-}
-
-.right-destiny .button-next,
-.right-destiny .button-prev {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  transition: .5s ease-in-out;
-  border-radius: 50%;
-  border: 1px solid white;
-  padding: 2px;
-  text-align: center;
-}
-
-.right-destiny .button-next i,
-.right-destiny .button-prev i {
-  color: white;
-  font-size: 1rem;
-}
-
-.right-destiny .button-next:hover,
-.right-destiny .button-prev:hover {
-  background-color: #a0cbff;
-}
-
-.right-destiny .foto2 .button-next {
-  right: 20px;
-  bottom: 20px
-}
-
-.right-destiny .foto1 .button-prev {
-  right: 20px;
-  bottom: 20px;
-}
-
-/*Destination page section1  end*/
-
 .manshet_appartment .swiper-slide.swiper-slide-visible.swiper-slide-active {
   opacity: 0;
   visibility: hidden;
@@ -1255,6 +1376,16 @@ main .section5 .reference-card .card {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 8px grey;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+main .section5 .reference-card .card .foto-card img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .section5 .reference-card .card .text-card .card-foot {
@@ -1362,7 +1493,16 @@ textarea {
 
 .section6 .connection .contact-right img {
   max-width: 550px;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
 
+.section6 .connection .contact-right img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /*section6 end*/
@@ -1500,10 +1640,19 @@ footer .foot .subs-2 .soc-net a i {
   font-size: 1.4rem;
   color: #004191;
   cursor: pointer;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
 }
+
+
+
 
 footer .foot .subs-2 .soc-net a i:hover {
   color: #2196f3;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* connect begin */

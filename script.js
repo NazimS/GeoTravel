@@ -22,7 +22,6 @@ function myFunction() {
 }
 // navbar fixed, scroll top end
 
-
 // 'change burger icon and open-menu' begin
 const rightMenu = document.querySelector('.right-menu')
 const menuBurg = document.querySelector('.burger-menu');
@@ -129,7 +128,6 @@ $(() => {
     $(".aze-cities").slideToggle("slow");
     $(this).toggleClass("aktiv");
     $(".turkbtn").toggleClass("aktiv");
-    // $(this).addClass(".aktiv")
   })
 
   $(".turkbtn").click(function () {
@@ -138,6 +136,22 @@ $(() => {
     $(this).toggleClass("aktiv");
     $(".azebtn").toggleClass("aktiv");
 
+  })
+
+  $(".foto2").click(function () {
+    $('.foto1').removeClass('aktiv');
+    $('.merkez-text').addClass('rotate');
+    $(this).addClass('aktiv');
+    $('.button-prev').addClass('aktiv');
+    $('.button-next').addClass('aktiv');
+  })
+
+  $(".foto1").click(function () {
+    $('.foto2').removeClass('aktiv');
+    $('.merkez-text').removeClass('rotate');
+    $(this).addClass('aktiv');
+    $('.button-prev').removeClass('aktiv');
+    $('.button-next').removeClass('aktiv');
   })
 
 })
