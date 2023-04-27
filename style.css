@@ -910,7 +910,6 @@ main .section2 .sect2-text h3 {
 }
 
 .accomodation .travel-place .travel-foto img {
-  /* max-width: 630px; */
   width: 100%;
   cursor: pointer;
   -webkit-transform: scale(1);
@@ -945,7 +944,6 @@ main .section2 .sect2-text h3 {
 }
 
 .arriving-left img {
-  /* max-width: 630px; */
   width: 100%;
   max-height: 325px;
   cursor: pointer;
@@ -985,8 +983,6 @@ main .section2 .sect2-text h3 {
   color: #004191;
   padding-bottom: 20px;
 }
-
-
 /*destination page end*/
 
 main .about {
@@ -1788,6 +1784,17 @@ footer .foot .subs-2 .soc-net a i:hover {
     top: 20px;
     transition: .5s;
   }
+  /*destination page begin*/
+  .inspire .gallery-insp {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+  }
+  .right-destiny .foto2 .button-next, .right-destiny .foto1 .button-prev {
+    right: 20px;
+  }
+  /*destination page end*/
 }
 
 @media (max-width:1099px) {
@@ -1812,7 +1819,6 @@ footer .foot .subs-2 .soc-net a i:hover {
 
   .section6 .connection .contact-right img {
     width: 100%;
-
   }
 }
 
@@ -1832,6 +1838,70 @@ footer .foot .subs-2 .soc-net a i:hover {
     text-align: center;
     padding-right: 0px;
   }
+
+  .inspire h2 {
+    padding-bottom: 40px;
+  }
+
+  /*destination page begin*/
+  .destinations .destiny {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .destinations .destiny .right-destiny {
+    width: 70%;
+  }
+  .destinations .destiny .left-destiny {
+    width: 100%;
+    text-align: justify;
+  }
+  .countries .country-selection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  .countries .country-selection .country-text {
+    width: 100%;
+    text-align: justify;
+  }
+  .accomodation .travel-place {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  .accomodation .travel-place .travel-foto {
+    width: 100%;
+  }
+  .accomodation .travel-place .travel-text {
+    width: 100%;
+  }
+  .accomodation .travel-place .travel-text h3 {
+    padding-bottom: 0px;
+  }
+  .arrive {
+    margin-top: 40px;
+  }
+  .arrive #arrive-direct {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .arrive #arrive-reverse {
+    flex-direction: column-reverse;
+    gap: 25px;
+  }
+  .arrive .arriving .arriving-left, .arrive .arriving .arriving-right  {
+    width: 100%;
+  }
+  .arrive .arriving .arriving-left img {
+    max-height: 450px;
+    object-fit: cover;
+  }
+  /*destination page end*/
 
   .section6 .connection {
     flex-direction: column-reverse;
@@ -1874,6 +1944,19 @@ footer .foot .subs-2 .soc-net a i:hover {
 
 @media (max-width: 768px) {
 
+  body .show-menu .show-left .langs, .home-navi,
+  .navi-gators, .subs-numbers, .subs-addr {
+    width: 80%;
+  }
+
+  body .show-menu .show-left .subs-numbers {
+    justify-content: flex-start;
+  }
+
+  body .show-menu .show-left .subs-addr {
+    text-align: left;
+  }
+
   body .show-menu .show-right {
     display: none;
   }
@@ -1890,7 +1973,7 @@ footer .foot .subs-2 .soc-net a i:hover {
 
   body .show-menu .show-left {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 150px;
 
   }
 
@@ -1921,6 +2004,12 @@ footer .foot .subs-2 .soc-net a i:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .countries .country-selection .country-left {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .section4 .cards {
@@ -1961,6 +2050,12 @@ footer .foot .subs-2 .soc-net a i:hover {
 }
 
 @media (max-width: 620px) {
+
+  .destinations .destiny .right-destiny {
+    width: 100%;
+    transition: .5s;
+}
+
   .section6 .connection .contact-right img {
     max-width: 400px;
     transition: .5s all ease-in-out;
@@ -1978,10 +2073,6 @@ footer .foot .subs-2 .soc-net a i:hover {
 
 @media (max-width: 565px) {
 
-  header .nav-menu .logo .nav1 {
-    justify-content: center;
-  }
-
   header .nav-menu .logo .foto img {
     max-width: 150px;
   }
@@ -1992,22 +2083,59 @@ footer .foot .subs-2 .soc-net a i:hover {
     max-width: 340px;
   }
 
-  .section5 .reference-card .card .text-card p {
+  .right-destiny .foto2 .button-next, .right-destiny .foto1 .button-prev {
+    display: none;
+}
+
+.right-destiny .foto1 img, .right-destiny .foto2 img {
+  height: 85%;
+}
+
+.right-destiny .foto1 .merkez-text {
+  top: 350px;
+}
+
+.right-destiny .foto2 .cappa-text {
+  bottom: 200px;
+  left: -30px !important;
+}
+
+.right-destiny .foto2.aktiv .cappa-text {
+  left: 5px !important;
+}
+
+.merkez-text.rotate {
+  rotate: -90deg;
+  bottom: 180px !important;
+}
+
+.section5 .reference-card .card .text-card p {
     line-height: 25px;
-  }
+}
 
-  .section4 .cards .card {
-    width: 100% !important;
-  }
+.section4 .cards .card {
+   width: 100% !important;
+}
 
-  footer .ellipse img {
+footer .ellipse img {
     height: 40px;
-  }
+}
+
 }
 
 @media (max-width: 410px) {
   .section6 .connection .contact-right img {
     max-width: 300px;
+  }
+
+  .countries .country-selection .country-left .button-aze .azebtn {
+    width: 340px;
+  }
+  .countries .country-selection .country-left .button-turk .turkbtn.aktiv {
+    width: 340px;
+  }
+  .countries .country-selection .country-text h3, .accomodation .travel-place .travel-text h3 {
+    text-align: center;
   }
 }
 
